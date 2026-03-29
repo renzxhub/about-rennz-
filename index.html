@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>RENNZ | Script Kiddie dari Metro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Particle background -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Custom cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Floating elements -->
+    <div class="floating-elements">
+        <div class="float-item">{ ; }</div>
+        <div class="float-item">&lt;/&gt;</div>
+        <div class="float-item">#</div>
+        <div class="float-item">_</div>
+        <div class="float-item">()</div>
+        <div class="float-item">[]</div>
+    </div>
+
+    <div class="container">
+        <!-- Header / Navbar -->
+        <nav class="navbar">
+            <div class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">RENNZ</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Online · Metro
+                </div>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="glitch-text" data-text="RENNZ">RENNZ</h1>
+                        <div class="typing-wrapper">
+                            <span class="static-text">I'm </span>
+                            <span class="typing-text"></span>
+                            <span class="cursor-blink">|</span>
+                        </div>
+                        <p class="hero-desc">Dari kamar di Metro Lampung, ngoprek script Roblox sampe jadi weapon.</p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Hubungi Aku
+                            </a>
+                            <a href="#projects" class="btn btn-outline">
+                                <i class="fas fa-code"></i> Lihat Project
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <div class="stat-value" id="projectCount">0</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="scriptCount">0</div>
+                            <div class="stat-label">Scripts</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="expCount">0</div>
+                            <div class="stat-label">Years Exp</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-code">
+                    <pre><code><span class="code-keyword">const</span> <span class="code-variable">rennz</span> = {
+    <span class="code-property">status</span>: <span class="code-string">"scripting..."</span>,
+    <span class="code-property">power</span>: <span class="code-number">100</span>,
+    <span class="code-property">mode</span>: <span class="code-string">"developer"</span>
+};</code></pre>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about">
+                <h2 class="section-title">Tentang Aku</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fas fa-user-astronaut"></i></div>
+                        <h3>Who Am I?</h3>
+                        <p>Bukan dari template, bukan dari AI — ini aku yang nulis sendiri. Nama panggilanku RENNZ, seorang script kiddie yang berubah jadi developer.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>Lokasi</h3>
+                        <p>Metro Lampung 🌟<br>Kota penghasil pisang dan programmer gila. Dari sini aku ngoding sampe subuh.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fas fa-birthday-cake"></i></div>
+                        <h3>Tanggal Lahir</h3>
+                        <p>08 April 2013<br>Aries — kepala keras, suka tantangan, gabisa diam.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fas fa-gamepad"></i></div>
+                        <h3>Awal Mula</h3>
+                        <p>Mulai dari iseng otak-atik script Roblox, nyolong GUI, sampe akhirnya bikin sendiri. Sekarang udah nyoba web dev, Python, dan masih belajar terus.</p>
+                    </div>
+                </div>
+                <div class="about-quote">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Dari oprek script Roblox jadi nge-kode beneran — error bukan musuh, tapi guru."</p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="skills">
+                <h2 class="section-title">Skill & Tools</h2>
+                <div class="skills-container">
+                    <div class="skills-category">
+                        <h3><i class="fas fa-code"></i> Languages</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Lua">
+                                <span class="skill-name">Lua/Luau</span>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-item" data-skill="HTML/CSS">
+                                <span class="skill-name">HTML/CSS</span>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-item" data-skill="JavaScript">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-item" data-skill="Python">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                                <span class="skill-percent">65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                        <div class="tools-grid">
+                            <div class="tool-item"><i class="fab fa-roblox"></i> Roblox Studio</div>
+                            <div class="tool-item"><i class="fas fa-terminal"></i> Termux</div>
+                            <div class="tool-item"><i class="fab fa-github"></i> GitHub</div>
+                            <div class="tool-item"><i class="fas fa-mobile-alt"></i> VS Code</div>
+                            <div class="tool-item"><i class="fas fa-database"></i> Luraph</div>
+                            <div class="tool-item"><i class="fas fa-shield-alt"></i> Kali Linux</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects">
+                <h2 class="section-title">Karya & Project</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fab fa-roblox"></i></div>
+                        <h3>Roblox Admin GUI</h3>
+                        <p>GUI Admin panel untuk game Roblox dengan fitur kick, ban, teleport, dan effect khusus.</p>
+                        <div class="project-tags">
+                            <span>Lua</span>
+                            <span>Roblox API</span>
+                            <span>GUI</span>
+                        </div>
+                        <a href="#" class="project-link">Lihat Project →</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>FPS Unlocker Tool</h3>
+                        <p>Tool buat nge-unlock FPS di game tertentu, biar main makin mulus walau pake laptop kentang.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Game Dev</span>
+                        </div>
+                        <a href="#" class="project-link">Lihat Project →</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-shield-virus"></i></div>
+                        <h3>Script Obfuscator</h3>
+                        <p>Tool buat ngacak-acak script biar susah dibaca orang lain. 15+ metode enkripsi.</p>
+                        <div class="project-tags">
+                            <span>Lua</span>
+                            <span>Security</span>
+                        </div>
+                        <a href="#" class="project-link">Lihat Project →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact">
+                <h2 class="section-title">Kontak & Sosmed</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fab fa-roblox"></i>
+                            <div>
+                                <h4>Roblox</h4>
+                                <p class="contact-value" id="robloxUser">TEMPE415</p>
+                                <button class="copy-btn" data-copy="robloxUser"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p class="contact-value" id="phoneNum">+62 812-3456-7890</p>
+                                <button class="copy-btn" data-copy="phoneNum"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p class="contact-value">/rennz</p>
+                                <button class="copy-btn" data-copy="github"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-discord"></i>
+                            <div>
+                                <h4>Discord</h4>
+                                <p class="contact-value">rennz._</p>
+                                <button class="copy-btn" data-copy="discord"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-status">
+                        <div class="status-card">
+                            <i class="fas fa-circle" style="color: #10b981; font-size: 12px;"></i>
+                            <span>Status: <strong>Online & Scripting</strong></span>
+                        </div>
+                        <div class="status-card">
+                            <i class="fas fa-clock"></i>
+                            <span>Waktu: <span id="liveTime">--:--:--</span></span>
+                        </div>
+                        <div class="status-card">
+                            <i class="fas fa-calendar"></i>
+                            <span>Tanggal: <span id="liveDate">--</span></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&lt;/&gt; with <i class="fas fa-heart" style="color: #ef4444;"></i> from Metro Lampung</p>
+            <p>© 2025 RENNZ — Script Kiddie to Developer</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
